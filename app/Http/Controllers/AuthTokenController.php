@@ -8,7 +8,7 @@ class AuthTokenController extends Controller
 {
     public function handle()
     {
-        info(\raquest()->all());
+        info(request()->all());
         return 'ok';
     }
 }
