@@ -14,10 +14,10 @@ class AddColumnsInAuthTokens extends Migration
     public function up()
     {
         Schema::table('auth_tokens', function (Blueprint $table) {
-            $table->string('code', 500)->default('');
-            $table->string('instanceId', 500)->default('');
-            $table->string('access_token', 500)->default('');
-            $table->string('refresh_token', 500)->default('');
+            $table->string('code', 1000)->default('');
+            $table->string('instanceId', 1000)->default('');
+            $table->string('access_token', 1000)->default('');
+            $table->string('refresh_token', 1000)->default('');
         });
     }
 
