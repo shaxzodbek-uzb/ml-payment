@@ -15,6 +15,7 @@ class CreateAuthTokensTable extends Migration
     {
         Schema::create('auth_tokens', function (Blueprint $table) {
             $table->id();
+            $table->string('token', 500);
             $table->timestamps();
         });
     }
