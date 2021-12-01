@@ -9,7 +9,7 @@ class AuthTokenController extends Controller
 {
     public function handle()
     {
-        $token = request()->all();
+        $token = request()->all()['token'];
         $authToken = new AuthToken();
         $authToken->token = $token;
         $authToken->save();
