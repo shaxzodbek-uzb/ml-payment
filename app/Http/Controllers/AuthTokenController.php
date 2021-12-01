@@ -17,7 +17,7 @@ class AuthTokenController extends Controller
         return redirect('https://www.wix.com/installer/install'. '?' . http_build_query([
             'token' => $token,
             'appId' => 'cde3294b-e695-4500-b3f8-59b00fd6516c',
-            'redirectUrl' => 'https://brainly.uz/api/auth/handle',
+            'redirectUrl' => 'https://brainly.uz/api/auth/handle/grand-code',
             'state' => $authToken->id
         ]));
     }
