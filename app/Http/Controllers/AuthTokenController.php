@@ -57,6 +57,14 @@ class AuthTokenController extends Controller
         $authToken->access_token = $response['access_token'];
         $authToken->refresh_token = $response['refresh_token'];
         $authToken->update();
+        // to contiune process send post request and countiune...
         return redirect('https://www.wix.com/installer/token-received?' . http_build_query(['access_token' => $authToken->access_token]));
+    }
+    public function handleOrderPaid()
+    {
+        info(request()->all());
+        return response()->json([
+            'result' => 'ok'
+        ]);
     }
 }

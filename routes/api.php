@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::any('auth/handle', [AuthTokenController::class, 'handle']);
+Route::any('auth/handle/order-paid', [AuthTokenController::class, 'handleOrderPaid']);
 Route::any('auth/handle/grand-code', [AuthTokenController::class, 'handleCode']);
