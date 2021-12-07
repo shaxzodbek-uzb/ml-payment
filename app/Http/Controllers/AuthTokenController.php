@@ -79,13 +79,10 @@ vQIDAQAB
 -----END PUBLIC KEY-----
 EOD;
         $decoded = JWT::decode($body, new Key($publicKey, 'RS256'));
-        info($decoded);
-        $decoded = JWT::decode($body1, new Key($publicKey, 'RS256'));
-        info(
-            $decoded
-        );
+        $decode2 = JWT::decode($body1, new Key($publicKey, 'RS256'));
+
         return response()->json([
-            'result' => $decoded
+            'result' => [$decoded, $decode2]
         ]);
     }
 }
