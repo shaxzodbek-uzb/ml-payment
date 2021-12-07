@@ -62,7 +62,8 @@ class AuthTokenController extends Controller
     }
     public function handleOrderPaid()
     {
-        info(request()->all());
+        $body = file_get_contents('php://input');
+        info($body);
         return response()->json([
             'result' => 'ok'
         ]);
